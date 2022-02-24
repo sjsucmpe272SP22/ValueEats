@@ -88,6 +88,10 @@ and order the food and the distributors who takes requests of the users and deli
 
 <h1>Project Idea -3: </h1>
 
+**Title**
+
+CV Maker
+
 **Introduction to problem statement**
 
 Students find it difficult to make a Cirriculum Vitae that's proper and end up getting out of the race in the corporate hunt for jobs. As resume being a gateway for an interview, it is as important as preparing for an interview when it comes to having a good resume which is well structured and properly designed.
