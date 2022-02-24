@@ -85,3 +85,22 @@ Based on the user request distributors can react accordingly.
 
 Restaurant owners who should update the leftover food in the application,Users who should login to the application 
 and order the food and the distributors who takes requests of the users and deliver the food to them.
+
+<h1>Project Idea -3: </h1>
+
+**Introduction to problem statement**
+
+Students find it difficult to make a Cirriculum Vitae that's proper and end up getting out of the race in the corporate hunt for jobs. As resume being a gateway for an interview, it is as important as preparing for an interview when it comes to having a good resume which is well structured and properly designed.
+
+**Abstract**
+
+We propose a web application where users enter their peronal data. The propsosed web application would generate a well structured CV thereby increasing the odds of making it to further rounds of the recruitment.
+
+**Approach**
+
+Frontend is created using HTML, CSS, and PHP. The given data is processed and the CV is generated using JavaScript so that users can download in the format of PDF.
+
+**Persona(s)**
+
+People who are in search of job, partcularly students.
+
