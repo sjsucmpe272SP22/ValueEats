@@ -85,3 +85,30 @@ Based on the user request distributors can react accordingly.
 
 Restaurant owners who should update the leftover food in the application,Users who should login to the application 
 and order the food and the distributors who takes requests of the users and deliver the food to them.
+
+
+
+<h1>Project Idea -3: </h1>
+
+**Title**
+
+CV Maker
+
+**Introduction to the problem**
+
+Students find it difficult to make a Cirriculum Vitae that's proper and end up getting out of the race in "corporate hunt" for jobs. As resume being a gateway for an interview, it is as important as preparing for an interview when it comes to having a good resume which is well structured and properly designed.
+
+**Abstract**
+
+We propose a web application where users can give their data. The proposed web application automatically generates the Cirriculum vitae which is well structured thereby increasing the odds of making it to the next round of the recruitment.
+
+**Aproach**
+
+The frontend is created to let the use enter data using HTML, CSS and PHP. Then the user's data is processed and the final CV is generated using JavaScript so users can download in the form of PDF.
+
+**Persona(s)**
+
+Our target audience are people who are in search of a job, partcularly students.
+
+
+
