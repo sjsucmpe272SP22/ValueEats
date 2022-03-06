@@ -1,4 +1,4 @@
-**Team-Project-6**
+<h1>Valueeats</h1>
 
 **Team members:**
 - Ramya Kotha
@@ -6,9 +6,6 @@
 - Abhinav Kashyap
 - Rakshith Reddy Bollu
 
-**Title**
-
-Valueeats
 
 **Introduction to the problem statement**
 
