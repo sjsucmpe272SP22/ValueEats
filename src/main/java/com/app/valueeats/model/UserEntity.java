@@ -19,7 +19,7 @@ public class UserEntity
 	private Long userId;
 
 	@Column(name = "Name")
-	private String userName;
+	private String name;
 	
 	@Column(name = "Phoneno")
 	private Long userPhoneno;
@@ -39,6 +39,9 @@ public class UserEntity
 	@Column(name = "Hotel_Name")
 	private String hotelName;
 
+	@Column(name = "Username")
+	private String userName;
+	
 	@Column(name = "Password")
 	private String userPassword;
 
@@ -53,12 +56,12 @@ public class UserEntity
 		this.userId = userId;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getName() {
+		return name;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public Long getUserPhoneno() {
@@ -107,6 +110,14 @@ public class UserEntity
 
 	public void setHotelName(String hotelName) {
 		this.hotelName = hotelName;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getUserPassword() {
