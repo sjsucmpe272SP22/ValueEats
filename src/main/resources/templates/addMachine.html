@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head profile="http://gmpg.org/xfn/11">
+<title>Value Eats</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" href="../styles/layout.css" type="text/css" />
+</head>
+<body id="top">
+<div class="wrapper row1">
+  <div id="header" class="clear">
+    <div class="fl_left">
+      <h1><a th:href="@{/index}">Online Value Eats System</a></h1>
+      <p>Value Eats
+      	<span style="padding-left: 650px; color: red;" th:text="${session.x}"></span> 
+      </p>
+    </div>
+    <div class="fl_right">
+      <ul> </ul>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper row2">
+  <div class="rnd">
+    <!-- ###### -->
+    <div id="topnav">
+      <ul>          
+          <li class="active"><a th:href="@{/addMachine}">Add Machine</a></li>
+          <li><a th:href="@{/machine/view}">View Machine</a></li> 
+          <li><a th:href="@{/addCategory}">Add Category</a></li>
+          <li><a th:href="@{/category/view}">View Category</a></li>
+          <li><a th:href="@{/signout}">Sign Out</a></li>
+      </ul>
+    </div>
+    <!-- ###### -->
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper row3">
+  <div class="rnd">
+    <div id="container" class="clear">
+      <!-- ####################################################################################################### -->
+      <h1>Add Machine Details</h1>
+       
+      <form action="#" th:action="@{/machine/add}" th:object="${machineDto}" method="post">
+          
+          <table align="center" border="0px" width="100px">
+              
+              <tr style="color: red;">
+                  <td>Machine Name:</td><td><input type="text" th:field="*{machineName}" name="machineName" size="35px"/></td>
+              </tr>
+              
+              <tr style="color: red;">
+                  <td>Address:</td><td><textarea cols="34" rows="7" th:field="*{machineAddress}" name="machineAddress"></textarea></td>
+              </tr>   
+              
+              <tr style="color: red;">
+                  <td>Zipcode:</td><td><input type="text" th:field="*{machineLocation}" name="machineLocation" size="35px"/></td>
+              </tr>
+              
+              <tr style="color: red;">
+                  <td>Machine Capacity:</td><td><input type="text" th:field="*{machineCapacity}" name="machineCapacity" size="35px"/></td>
+              </tr>
+              
+              <tr>
+                  <td>&nbsp;</td>
+                  <td><input type="submit" value="Submit"/><input type="reset" value="Reset"/></td>
+              </tr>
+              
+          </table>
+          
+           <div th:if="${#fields.hasErrors('global')}">
+			    <p th:each="err : ${#fields.errors('global')}" th:text="${err}" style="color:red;" />
+		   </div>
+          
+      </form>
+                  
+    </div>
+    
+  </div>
+    
+ </div>
+    
+</body>
+    
+</html>
