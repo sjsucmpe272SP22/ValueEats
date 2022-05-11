@@ -22,6 +22,6 @@ To create this web application we used HTML,CSS and javascript as frontend Where
 **Persona(s)**
 
 * **Admin** who is responsible for maintainig the Valueats food vending machines.
-* **Restaurant** owners* who should update and load the leftover food in the vending machine.
+* **Restaurant** owners who should update and load the leftover food in the vending machine.
 * **Users** who can collect the food from vending machines.
 
