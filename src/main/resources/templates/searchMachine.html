@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head profile="http://gmpg.org/xfn/11">
+<title>Value Eats</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" href="../styles/layout.css" type="text/css" />
+</head>
+<body id="top">
+<div class="wrapper row1">
+  <div id="header" class="clear">
+    <div class="fl_left">
+      <h1><a th:href="@{/index}">Online Value Eats System</a></h1>
+      <p>Value Eats
+      	<span style="padding-left: 650px; color: red;" th:text="${session.x}"></span> 
+      </p>
+    </div>
+    <div class="fl_right">
+      <ul> </ul>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper row2">
+  <div class="rnd">
+    <!-- ###### -->
+    <div id="topnav">
+      <ul>          
+       	  <li><a th:href="@{/user/available}">View Profile</a></li>  
+          <li class="active"><a th:href="@{/machine/search}">Search Machine</a></li>
+          <li><a th:href="@{/item/view}">View Items</a></li>
+          <li><a th:href="@{/signout}">Sign Out</a></li>
+      </ul>
+    </div>
+    <!-- ###### -->
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper row3">
+  <div class="rnd">
+    <div id="container" class="clear">
+      <!-- ####################################################################################################### -->
+      
+      <h1>Search Machine Details</h1>
+      
+      <form action="#" th:action="@{/machine/advsearch}" th:object="${machineDto}" method="post">
+          
+          <table align="center" border="0px" width="100px">
+              
+              <tr style="color: red;">
+                  <td>Zipcode:</td><td><input type="text" th:field="*{machineLocation}" name="machineLocation" size="35px"/></td>
+              </tr>
+          
+              <tr>
+                  <td>&nbsp;</td>
+                  <td><input type="submit" value="Submit"/><input type="reset" value="Reset"/></td>
+              </tr>
+             
+          </table>
+          
+           <div th:if="${#fields.hasErrors('global')}">
+			    <p th:each="err : ${#fields.errors('global')}" th:text="${err}" style="color:red;" />
+		   </div>
+          
+      </form>
+      
+      <h1>View Machine Details</h1>
+       
+      <div th:switch="${machines}">
+      
+	    <h2 th:case="null">No Records Found!</h2>
+	    
+	        <div th:case="*">
+	        
+	            <table>
+	            
+	                <thead>
+	                
+	                    <tr>
+	                        <th>Id</th>
+	                        <th>Name</th>
+	                        <th>Address</th>
+	                        <th>Zipcode</th>
+	                        <th>Capacity</th>
+	                        <th>Remaining Quantity</th>
+	                        <th>Add Items</th>
+	                        <th>Recorded Date</th>
+	                    </tr>
+	                    
+	                </thead>
+	                
+	                <tbody>
+	                
+	                <tr th:each="m : ${machines}">
+	                
+	                    <td th:text="${m.machineId}"></td>
+	                    <td th:text="${m.machineName}"></td>
+	                    <td th:text="${m.machineAddress}"></td>
+	                    <td th:text="${m.machineLocation}"></td>
+	                    <td th:text="${m.machineCapacity}"></td>
+	                    <td style="color:red;" th:text="${m.balance}"></td>
+	                    <td><a th:href="@{/item/advAdd/{id}(id=${m.machineId})}"><img src='../images/Add.png'></img></a></td>
+	                    <td th:text="${m.recordedDate}"></td>
+	                    
+	                </tr>
+	                
+	                <tr th:if="${#lists.isEmpty(machines)}">
+	                
+	                	<td>&nbsp;</td>
+	                    <td>&nbsp;</td>
+	                    <td>&nbsp;</td>
+	                    <td style="color:red;">No Record Found!</td>
+	                    <td>&nbsp;</td>	                    
+	                    <td>&nbsp;</td>
+	                    <td>&nbsp;</td>
+	                    <td>&nbsp;</td>
+	                    
+	                </tr>
+	                
+	            </tbody>
+	            
+	        </table>
+	        
+	    </div> 
+                  
+    </div>
+    
+   </div>
+    
+  </div>
+    
+ </div>
+    
+</body>
+    
+</html>
