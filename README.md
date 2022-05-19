@@ -25,3 +25,10 @@ To create this web application we used HTML,CSS and javascript as frontend Where
 * **Restaurant** owners who should update and load the leftover food in the vending machine.
 * **Users** who can collect the food from vending machines.
 
+**Architechture Diagram**
+
+**UML Class Diagram**
+
+**Project Report URL**
+
+
