@@ -37,6 +37,7 @@ To create this web application we used HTML,CSS and javascript as frontend Where
 <img width="676" alt="image" src="https://user-images.githubusercontent.com/60643500/169194867-63effa11-77bb-44d9-8450-7ef55a55877c.png">
 
 
-**Project Report URL**
+**[Project Report](https://github.com/sjsucmpe272SP22/ValueEats/blob/main/Value%20Eats%20Project%20Report.pdf)**
+
 
 
